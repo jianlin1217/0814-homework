@@ -54,12 +54,12 @@ VALUES
 
 5.將前端index中預先設好的資料弄到index上顯示
 
-找到<ul>的id為 "latestNews"
+找到ul的id為 "latestNews"
 先清空  latestNews的內容
 將陣列存到news變數中
 alter(news.title);
 檢視資料有無錯誤
-沒有錯誤的話將資料先串好放到另一字串再使用text()放到<li>中
-並使用addClass()將<li>套上class  
+沒有錯誤的話將資料先串好放到另一字串再使用text()放到li中
+並使用addClass()將li套上class  
 
-
+6.
