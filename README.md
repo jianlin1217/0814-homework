@@ -11,11 +11,11 @@
 CREATE DATABASE news DEFAULT CHARACTER SET UTF8
 
 2.建立資料表   newslist
- ---  newsId        //新聞的ID編號  為主鍵  自動增加
- ---  newsDate      //新聞的日期
- ---  newsTitle     //新聞標題
- ---  newsContent   //新聞內容
- ---  newsLink      //新聞連結
+  newsId        //新聞的ID編號  為主鍵  自動增加
+  newsDate      //新聞的日期
+  newsTitle     //新聞標題
+  newsContent   //新聞內容
+  newsLink      //新聞連結
 
  create TABLE newslist
 (
@@ -48,6 +48,18 @@ INSERT INTO newslist
 VALUES
 ("2020-08-13","Title5","Content5","Link5");
 
-4.複製出前端套版雛形 (上課內容的 index_0.html
+4.複製出前端套版雛形 
+
+複製上課內容的 index_0.html作為作業的index
+
+5.將前端index中預先設好的資料弄到index上顯示
+
+找到<ul>的id為 "latestNews"
+先清空  latestNews的內容
+將陣列存到news變數中
+alter(news.title);
+檢視資料有無錯誤
+沒有錯誤的話將資料先串好放到另一字串再使用text()放到<li>中
+並使用addClass()將<li>套上class  
 
 
