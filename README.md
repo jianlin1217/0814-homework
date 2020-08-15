@@ -62,4 +62,11 @@ alter(news.title);
 沒有錯誤的話將資料先串好放到另一字串再使用text()放到li中
 並使用addClass()將li套上class  
 
-6.
+6.將編輯、刪除按鈕加上去
+
+兩個按鈕的class分別為"editItem"，"deleteItem"
+將其標籤及屬性存到一個變數中   //若要將標籤存到變數中要用 ` `
+append到剛剛的$li中
+再appendTo("latestNews");
+
+7.
