@@ -210,7 +210,7 @@
                 .then(function (e) {
                     $.get("/home/news", function (e) {
                         newsList = JSON.parse(e);
-                        refreshNewsUI();
+                        reList();
                     })
                 })
 
@@ -244,6 +244,17 @@
                     // alert(Ntitle);
                     addNews = { ymd: Ndate, title: Ntitle };
                     newsList.push(addNews);
+                    $.ajax({
+                        type: "post",
+                        url: "/home/news",
+                        data: addNews
+                    })
+                    .then(function (e) {
+                        $.get("/home/news", function (e) {
+                        newsList = JSON.parse(e);
+                    reList();
+                })
+            })
                 }
                 else if(IsNew==0)
                 {

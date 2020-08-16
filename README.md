@@ -147,4 +147,8 @@ insert into news (ymd, title) values
 編輯後資料傳送到資料庫中
 在執行刷新重讀的動作
 
-15.
+15.資料新增
+
+ajax
+方法為 post
+變數套用到前面新增資料的程式中
