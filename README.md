@@ -57,7 +57,7 @@ VALUES
 找到ul的id為 "latestNews"
 先清空  latestNews的內容
 將陣列存到news變數中
-alter(news.title);
+alert(news.title);
 檢視資料有無錯誤
 沒有錯誤的話將資料先串好放到另一字串再使用text()放到li中
 並使用addClass()將li套上class  
@@ -69,4 +69,9 @@ alter(news.title);
 append到剛剛的$li中
 再appendTo("latestNews");
 
-7.
+7.將刪除功能套用到刪除按鈕中
+
+使用class .deleteItem 對按鈕做點擊事件的程式
+需要判定點下刪除按鈕的是哪筆資料
+使用this並alert檢查是否判定有誤
+//此部分有點問題  在點下deleteItem時有正確判斷到是哪個，但在使用splice刪除後再次點擊按鈕沒有反應

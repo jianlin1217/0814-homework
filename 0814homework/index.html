@@ -167,20 +167,32 @@
             // 練習與任務:
             //先清空  latestNews的內容
 
-            $("#latestNews").empty();
-            for(let i = 0 ; i<newsList.length ; i++)
+            function reList()
             {
-                var news = newsList[i];
-                // alert(news.title);
-                var liText=(news.title + "   [" + news.ymd+"]   ");
-                var $li=$("<li></li>")
-                        .text(liText)
-                        .addClass("list-group-item");
-                $li.append(edit_delete);
-                $li.appendTo("#latestNews");
+                $("#latestNews").empty();
+                for(let i = 0 ; i<newsList.length ; i++)
+                {
+                    var news = newsList[i];
+                    // alert(news.title);
+                    var liText=(news.title + "   [" + news.ymd+"]   ");
+                    var $li=$("<li></li>")
+                            .text(liText)
+                            .addClass("list-group-item");
+                    $li.append(edit_delete);
+                    $li.appendTo("#latestNews");
+                }
             }
 
+            reList();
 
+            $(".deleteItem").on("click",function(){
+                var dindex = $(this).closest("li").index();      //或者可以使用parent().parent()找出  但要看總共包了幾層  比較不便  
+                // alert(dindex);
+                // alert("已刪除"+newsList[dindex].title);
+                newsList.splice(dindex,1);
+
+                reList();
+            })
 
         })  // end of init.
 
