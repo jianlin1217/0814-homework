@@ -91,6 +91,19 @@ titleTextBox  以及  ymdTextBox
 接著使用一變數存成JSON型態
 再push到原本的newsList中
 
-10.
+10.編輯按鈕操作，呼叫對話盒將值讀取到其中
+
+使用class .editItem來對按鈕事件作操作
+再讀取最近li的值來判斷index
+將該index的值使用val設定到textBox中
+
+11.測試後與新增按鈕衝突，設定一個判斷變數，並將值正確傳到原本的位置
+
+設定一個變數為 IsNew  等於1時為新增   0為編輯
+用if else來作操作
+再利用步驟10的index來將值放回原地方
+
+12.
+
 
 
