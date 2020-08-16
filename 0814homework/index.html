@@ -176,9 +176,9 @@
                     type:"get",
                     url :"/home/news"
                 }).then(function (e) {
-                    alert(e);
-                    // newsList = JSON.parse(e);
-                    // reList();
+                    // alert(e);
+                    newsList = JSON.parse(e);
+                    reList();
                 })
                 for (let i = 0; i < newsList.length; i++) {
                     var news = newsList[i];
@@ -202,6 +202,17 @@
                 // alert(dindex);
                 // alert("已刪除"+newsList[dindex].title);
                 newsList.splice(nowindex, 1);
+                $.ajax({
+                    type: "delete",
+                    url: "/home/news",
+                    data: newsList[nowindex]
+                })
+                .then(function (e) {
+                    $.get("/home/news", function (e) {
+                        newsList = JSON.parse(e);
+                        refreshNewsUI();
+                    })
+                })
 
 
             })

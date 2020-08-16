@@ -107,8 +107,37 @@ titleTextBox  以及  ymdTextBox
 
 抓取失敗
 url設定錯誤
-url修改成http://localhost/phpmyadmin/db_structure.php?server=1&db=news也失敗
+url修改成http://localhost/phpmyadmin/db_structure.php?server=1&db=news
+也失敗
+發現問題惟仍使用XAMPP而非 node.js
+且將資料庫改成上課預設的  否則格式會出錯
 
+create database labDB default character set utf8;
+use labDB;
+create table news
+(
+  newsId int auto_increment not null primary key,
+  ymd char(10),
+  title varchar(50)
+);
+insert into news (ymd, title) values 
+  ('2017-05-01', 'News A'),
+  ('2017-05-02', 'News B'),
+  ('2017-05-03', 'News C'),
+  ('2017-05-04', 'News D'),
+  ('2017-05-05', 'News E');
 
+用ajax
+方法為  get
+取得JSON後將資料套到newsList中
+刷新將資料顯示在網頁上
 
+13.資料刪除  同時也會刪除到資料庫中的
 
+用ajax
+方法為  delete
+刪除後
+取得JSON後將資料套到newsList中
+刷新將資料顯示在網頁上
+
+14.
