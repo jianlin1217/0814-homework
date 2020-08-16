@@ -140,4 +140,11 @@ insert into news (ymd, title) values
 取得JSON後將資料套到newsList中
 刷新將資料顯示在網頁上
 
-14.
+14.資料編輯
+
+用ajax
+方法為 put
+編輯後資料傳送到資料庫中
+在執行刷新重讀的動作
+
+15.
