@@ -107,6 +107,8 @@ titleTextBox  以及  ymdTextBox
 
 抓取失敗
 url設定錯誤
+url修改成http://localhost/phpmyadmin/db_structure.php?server=1&db=news也失敗
+
 
 
 
