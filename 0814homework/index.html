@@ -194,6 +194,23 @@
                 reList();
             })
 
+            $("#newItem").on("click",function(){
+                $("#newsModal").modal({backdrop:"static"});
+            })
+            
+            $("#okButton").on("click",function(){
+                $("#newsModal").modal("hide");
+                var Ntitle = $("#titleTextBox").val();
+                var Ndate  = $("#ymdTextBox").val();
+                // alert(Ntitle);
+                addNews = {ymd:Ndate,title:Ntitle};
+                newsList.push(addNews);
+
+                reList();
+            })
+
+            
+
         })  // end of init.
 
     </script>

@@ -75,3 +75,22 @@ append到剛剛的$li中
 需要判定點下刪除按鈕的是哪筆資料
 使用this並alert檢查是否判定有誤
 //此部分有點問題  在點下deleteItem時有正確判斷到是哪個，但在使用splice刪除後再次點擊按鈕沒有反應
+
+8.將新增功能套用到新增按鈕中
+
+使用id #newItem 對按鈕做點擊事件的程式
+呼叫出對話盒，使用對話盒的id，#newsModal
+但此時對話盒會點背景消失
+所以需要加上backdrop : static
+
+9.對對話盒做input標籤的讀取
+分別有兩個TextField
+titleTextBox  以及  ymdTextBox
+在點擊確定按鈕後讀取這兩個地方的值
+有先用alter()測試資料是否正確
+接著使用一變數存成JSON型態
+再push到原本的newsList中
+
+10.
+
+
