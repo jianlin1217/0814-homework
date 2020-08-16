@@ -172,6 +172,13 @@
 
             function reList() {
                 $("#latestNews").empty();
+                $.ajax({
+                    type:"get",
+                    url :"/home/news"
+                }).then(function (e) {
+                    newsList = JSON.parse(e);
+                    reList();
+                })
                 for (let i = 0; i < newsList.length; i++) {
                     var news = newsList[i];
                     // alert(news.title);

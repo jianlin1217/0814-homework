@@ -103,7 +103,10 @@ titleTextBox  以及  ymdTextBox
 用if else來作操作
 再利用步驟10的index來將值放回原地方
 
-12.
+12.將資料庫的資料抓回顯示再上面
+
+抓取失敗
+url設定錯誤
 
 
 
